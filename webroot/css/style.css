@@ -1,0 +1,337 @@
+/**
+ * Main stylesheet
+ */
+@import url(links.css);
+@import url(gallery.css);
+@import url(figure.css);
+
+
+/**
+ * General elements
+ */
+body {
+	overflow-y:scroll;
+}
+
+#wrapper{
+	margin-bottom:100px;
+}
+
+/**
+ * Figure
+ */
+figure {
+	
+}
+
+figcaption {
+	font-style: italic;
+}
+
+
+/**
+ * CSS sprite for a dice with six faces.
+ *
+ */
+ul.dice {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+ 
+ul.dice li {
+  display: inline-block;
+  padding: 0;
+  margin: 0 4px 0 0;
+  width: 32px;
+  height: 32px;
+  background: url(http://www.student.bth.se/~jejd14/oophp/kmom02/zeus/webroot/img/dice-faces.jpg) no-repeat;
+}
+ 
+ul.dice li.dice-1 { background-position: -160px 0px; }
+ul.dice li.dice-2 { background-position: -128px 0px; }
+ul.dice li.dice-3 { background-position:  -96px 0px; }
+ul.dice li.dice-4 { background-position:  -64px 0px; }
+ul.dice li.dice-5 { background-position:  -32px 0px; }
+ul.dice li.dice-6 { background-position:    0px 0px; }
+
+
+.stylish-input-group .input-group-addon{
+    background: white !important; 
+}
+.stylish-input-group .form-control{
+	box-shadow:0 0 0; 
+	border-color:#ccc;
+}
+.stylish-input-group button{
+    border:0;
+    background:transparent;
+}
+
+.published {
+	font-style: italic;
+	color: #707070;
+}
+
+.fade-carousel {
+    position: relative;
+    height: 25vh;
+}
+.fade-carousel .carousel-inner .item {
+    height: 25vh;
+}
+.fade-carousel .carousel-indicators > li {
+    margin: 0 2px;
+    background-color: #f39c12;
+    border-color: #f39c12;
+    opacity: .7;
+}
+.fade-carousel .carousel-indicators > li.active {
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+}
+
+/********************************/
+/*          Hero Headers        */
+/********************************/
+.hero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0 rgba(0,0,0,.75);
+      -webkit-transform: translate3d(-50%,-50%,0);
+         -moz-transform: translate3d(-50%,-50%,0);
+          -ms-transform: translate3d(-50%,-50%,0);
+           -o-transform: translate3d(-50%,-50%,0);
+              transform: translate3d(-50%,-50%,0);
+}
+.hero h1 {
+    font-size: 6em;    
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.fade-carousel .carousel-inner .item .hero {
+    opacity: 0;
+    -webkit-transition: 2s all ease-in-out .1s;
+       -moz-transition: 2s all ease-in-out .1s; 
+        -ms-transition: 2s all ease-in-out .1s; 
+         -o-transition: 2s all ease-in-out .1s; 
+            transition: 2s all ease-in-out .1s; 
+}
+.fade-carousel .carousel-inner .item.active .hero {
+    opacity: 1;
+    -webkit-transition: 2s all ease-in-out .1s;
+       -moz-transition: 2s all ease-in-out .1s; 
+        -ms-transition: 2s all ease-in-out .1s; 
+         -o-transition: 2s all ease-in-out .1s; 
+            transition: 2s all ease-in-out .1s;    
+}
+
+/********************************/
+/*            Overlay           */
+/********************************/
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: #080d15;
+    opacity: .7;
+}
+
+/********************************/
+/*          Custom Buttons      */
+/********************************/
+.btn.btn-lg {padding: 10px 40px;}
+.btn.btn-hero,
+.btn.btn-hero:hover,
+.btn.btn-hero:focus {
+    color: #f5f5f5;
+    background-color: #1abc9c;
+    border-color: #1abc9c;
+    outline: none;
+    margin: 20px auto;
+}
+
+/********************************/
+/*       Slides backgrounds     */
+/********************************/
+.fade-carousel .slides .slide-1, 
+.fade-carousel .slides .slide-2,
+.fade-carousel .slides .slide-3 {
+  height: 25vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.fade-carousel .slides .slide-1 {
+  background-image: url(../img/reacher2.jpg);
+}
+.fade-carousel .slides .slide-2 {
+  background-image: url(../img/thor_mini2.jpg);
+}
+.fade-carousel .slides .slide-3 {
+  background-image: url(../img/noah.jpg);
+}
+
+/********************************/
+/*          Media Queries       */
+/********************************/
+@media screen and (min-width: 980px){
+    .hero { width: 980px; }    
+}
+@media screen and (max-width: 640px){
+    .hero h1 { font-size: 4em; }    
+}
+
+a.list-group-item {
+    height:auto;
+    min-height:220px;
+}
+a.list-group-item.active small {
+    color:#fff;
+}
+.stars {
+    margin:20px auto 1px;    
+}
+
+@media (max-width: 768px) {
+ .your_class {
+	text-align:center;
+}
+}
+
+ @media (min-width: 769px) {
+ .your_class {
+  text-align:center;
+}
+}
+
+.nb-plain ul li:nth-child(6){
+	float:right;
+}
+
+.nb-plain ul li:nth-child(7){
+	float:right;
+}
+
+@media (max-width: 768px) {
+
+	.nb-plain ul li:nth-child(6){
+		float:none;
+	}
+	.nb-plain ul li:nth-child(7){
+		float:none;
+	}
+}
+
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
+color: #fff;
+background-color: #428bca;
+}
+
+.margintop20 {
+    margin-top:20px;
+}
+
+.nav-pills>li>a {
+border-radius: 0px;
+}
+
+a {
+color: #000;
+text-decoration: none;
+}
+
+a:hover {
+color: #000;
+text-decoration: none;
+}
+
+
+.nav-stacked>li+li {
+margin-top: 0px;
+margin-left: 0;
+border-bottom:1px solid #dadada;
+border-left:1px solid #dadada;
+border-right:1px solid #dadada;
+}
+
+.active2 {
+    border-right:4px solid #428bca;
+}
+
+.link-spanner{
+  position:absolute; 
+  width:100%;
+  height:100%;
+  top:0;
+  left: 0;
+  z-index: 1;
+
+  /* edit: fixes overlap error in IE7/8, 
+     make sure you have an empty gif 
+  background-image: url('empty.gif');*/
+}
+.a:hover  .pricetag{
+	background-color:#FF6666;
+}
+
+ .a:hover .pricetagsmall{
+	background-color:#FF6666;
+}
+.pricetag{
+	position: absolute;
+    left: 280px;
+    top: 470px;
+	width: 75px;
+    height: 75px;
+	line-height:40px;
+	text-align:center;
+	z-index:1;
+	border-radius: 50%;
+	background-color:#6699FF;
+}
+
+.pricetagsmall{
+	position: absolute;
+    left: 210px;
+    top: 383px;
+	width: 50px;
+    height: 50px;
+	text-align:center;
+	z-index:1;
+	border-radius: 50%;
+	background-color:#6699FF;
+}
+
+.a:hover  .blueborder{
+	border: 2px solid #FF6666;
+}
+
+.blueborder{
+	border: 2px solid #6699FF;
+}
+
+.b:hover a{
+	color: #FF6666;
+}
+
+.active2 {
+   pointer-events: none;
+   cursor: default;
+}
+
+.frontpageheader{
+	border:1px solid #eeeeee;
+	margin-bottom:25px;
+	margin-top:100px;
+}
