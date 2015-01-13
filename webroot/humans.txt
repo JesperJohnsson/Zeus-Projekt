@@ -1,1 +1,0 @@
-Zeus is a PHP-boilerplate/framework for small websites. Zeus was built by Jesper Johnsson (jesper.johnsson1995@hotmail.com) as a assignement.
